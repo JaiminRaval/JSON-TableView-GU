@@ -9,13 +9,17 @@ import Foundation
 
 
 final class JsonServices {
+    
     public static let shared = JsonServices()
     
     func readJSON(filename: String) -> [JokeModel] {
+        
                 var arr: [JokeModel] = []
+        
                 guard let url = Bundle.main.url(forResource: filename, withExtension: "json") else {
                         return arr
                 }
+        
                 do {
                     let data = try Data(contentsOf: url)
                     arr = try JSONDecoder().decode([JokeModel].self, from: data)

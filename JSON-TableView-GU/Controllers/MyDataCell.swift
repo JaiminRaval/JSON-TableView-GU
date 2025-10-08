@@ -9,6 +9,10 @@ import UIKit
 
 class MyDataCell: UITableViewCell {
 
+    @IBOutlet weak var setupLbl: UILabel!
+    @IBOutlet weak var punchLbl: UILabel!
+    @IBOutlet weak var typeLbl: UILabel!
+    @IBOutlet weak var idLbl: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
