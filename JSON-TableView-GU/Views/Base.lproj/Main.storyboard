@@ -34,13 +34,13 @@
                     <navigationItem key="navigationItem" id="Ga9-CI-EEd">
                         <barButtonItem key="rightBarButtonItem" title="Saved" image="star.fill" catalog="system" id="sAD-D4-1fe">
                             <connections>
-                                <action selector="savedBtnTapped:" destination="BYZ-38-t0r" id="buo-ft-EzL"/>
+                                <action selector="saveSrcBtnTapped:" destination="BYZ-38-t0r" id="g37-CX-rMW"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="MyDataTable" destination="08E-QP-dCO" id="Aea-2g-Trd"/>
-                        <segue destination="BhV-1c-wOO" kind="presentation" id="Lzv-3u-D3Y"/>
+                        <segue destination="BhV-1c-wOO" kind="presentation" identifier="goToSavedVC" id="Lzv-3u-D3Y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

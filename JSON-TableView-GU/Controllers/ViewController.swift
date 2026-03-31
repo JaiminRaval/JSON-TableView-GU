@@ -123,12 +123,16 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     
     override func viewWillAppear(_ animated: Bool) {
-        //  Fetching JSON data from our func
-        jokesArr = JsonServices.shared.readJSON(filename: "LocalJson")
-        // Remember to update UI on main thread ALWAYS
-        DispatchQueue.main.async { [self] in
-            MyDataTable.reloadData()
-        }
+//  Fetching JSON data from our func
+//  Uncomment to fetch jokes to from local JSON file named: "LocalJson"
+        //  jokesArr = JsonServices.shared.readJSON(filename: "LocalJson")
+//  Fetching data from a live API EndPoint.
+        APIManager.shared.callAPI()
+        
+//        // Remember to update UI on main thread ALWAYS
+//        DispatchQueue.main.async { [self] in
+//            MyDataTable.reloadData()
+//        }
     }
         
         
@@ -193,7 +197,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         return trailingConfig
     }
-
+    
+    @IBAction func saveSrcBtnTapped(_ sender: UIBarButtonItem) {
+        
+        performSegue(withIdentifier: "goToSavedVC", sender: self)
+    }
+    
 
 }
 
