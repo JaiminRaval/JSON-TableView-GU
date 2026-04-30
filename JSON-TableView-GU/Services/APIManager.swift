@@ -46,7 +46,7 @@ final class APIManager {
                 }
                 
             }
-            //  API code doesnt works
+            //  API code doesnt works if not called this func
             dataTask.resume()
         } else {
             //  check url if this get prints
